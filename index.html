@@ -100,20 +100,32 @@
     </style>
 </head>
 <body class="body">
-    <button class="mario"></button>
+    <img class="mario" id="mario"></img>
     <p class="mario_name">Марио</p>
     <p class="mario_role">Персонаж</p>
-    <button class="albert" id="albertio"></button>
+    <img class="albert" id="albert"></img>
     <p class="albert_name">Альберт Эйнштейн</p>
     <p class="albert_role">Физик-теоретик</p>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
+    dictionary = {
+        mario: "Марио",
+        albert: "Альберт Эйнштейн"
+    }
+    const divs = document.getElementsByTagName("img");
+    const divPressed = e => {
+      choice = e.target.id;
+    }
+    for (let div of divs) {
+      div.addEventListener("click", divPressed);
+    }
     const tg = window.Telegram.WebApp;
-    const albertio = document.getElementById("albertio");
+    const albert = document.getElementById("albert");
 
-    albertio.addEventListener("click", function() {
+    albert.addEventListener("click", function() {
         const data = {
-            character: "albert"
+            character: dictionary[choice]
         };
         tg.sendData(JSON.stringify(data));
     })
