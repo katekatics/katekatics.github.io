@@ -108,14 +108,15 @@
     <p class="albert_role">Физик-теоретик</p>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
-    let tg = window.Telegram.WebApp;
-    let albertio = document.getElementById("albertio");
+    const tg = window.Telegram.WebApp;
+    const albertio = document.getElementById("albertio");
 
     albertio.addEventListener("click", function() {
-        let data {
+        const data {
             character: "albert"
         };
         tg.sendData(JSON.stringify(data));
+        tg.close();
     }
 </script>
 </body>
