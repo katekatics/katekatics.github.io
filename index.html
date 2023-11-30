@@ -113,7 +113,10 @@
     let mario = document.getElementById("mario");
 
     mario.addEventListener("click", function() {
-        tg.close();
+        let data {
+            character: "mario"
+        };
+        tg.sendData(JSON.stringify(data));
     }
 </script>
 </body>
