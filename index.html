@@ -13,9 +13,6 @@
             background: #F5F5F5 0% 0% no-repeat padding-box;
             opacity: 1;
         }
-       /* .body p, .body.div {
-            margin: 0 auto;
-        }*/
 
         .mario {
             position: relative;
@@ -24,7 +21,7 @@
             width: 392px;
             height: 392px;
             /* UI Properties */
-            background: transparent url('mario.png') 0% 0% no-repeat padding-box;
+            background: transparent url('img/mario.png') 0% 0% no-repeat padding-box;
             box-shadow: 0px 15px 15px #00000029;
             border: 3px solid #27A7E7;
             border-radius: 50px;
@@ -66,7 +63,7 @@
             width: 392px;
             height: 392px;
             /* UI Properties */
-            background: transparent url('albert.png') 0% 0% no-repeat padding-box;
+            background: transparent url('img/albert.png') 0% 0% no-repeat padding-box;
             box-shadow: 0px 15px 15px #00000029;
             border: 3px solid #27A7E7;
             border-radius: 50px;
@@ -102,14 +99,26 @@
         }
     </style>
 </head>
-<body>
-    <div class="body">
-        <div class="mario"></div>
-        <p class="mario_name">Марио</p>
-        <p class="mario_role">Персонаж</p>
-        <div class="albert"></div>
-        <p class="albert_name">Альберт Эйнштейн</p>
-        <p class="albert_role">Физик-теоретик</p>
-    </div>
+<body class="body">
+    <button class="mario" id="mario"></button>
+    <p class="mario_name">Марио</p>
+    <p class="mario_role">Персонаж</p>
+    <button class="albert"></button>
+    <p class="albert_name">Альберт Эйнштейн</p>
+    <p class="albert_role">Физик-теоретик</p>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script type="text/javascript">
+    let tg = window.Telegram.WebApp;
+    let mario = document.getElementById('mario2');
+
+    mario.addEventListener('click', () => {
+
+    let data {
+        character: "mario"
+    }
+        tg.sendData(JSON.stringify(data);
+        tg.close();
+    }
+</script>
 </body>
 </html>
