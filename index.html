@@ -122,13 +122,10 @@
     }
     const tg = window.Telegram.WebApp;
     const albert = document.getElementById("albert");
-
-    albert.addEventListener("click", function() {
-        const data = {
-            character: dictionary[choice]
-        };
-        tg.sendData(JSON.stringify(data));
-    })
+    const data = {
+        character: dictionary[choice]
+    };
+    tg.sendData(JSON.stringify(data));
 </script>
 </body>
 </html>
