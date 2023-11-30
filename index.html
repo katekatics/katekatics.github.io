@@ -100,7 +100,7 @@
     </style>
 </head>
 <body class="body">
-    <button id="mario">Mario 2</button>
+    <button id="mario">Mario</button>
     <div class="mario"></div>
     <p class="mario_name">Марио</p>
     <p class="mario_role">Персонаж</p>
@@ -108,15 +108,11 @@
     <p class="albert_name">Альберт Эйнштейн</p>
     <p class="albert_role">Физик-теоретик</p>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script type="text/javascript">
+<script>
     let tg = window.Telegram.WebApp;
-    let mario = document.getElementById('mario');
+    let mario = document.getElementById("mario");
 
-    mario.addEventListener('click', () => {
-        let data {
-            character: "mario"
-        }
-        tg.sendData(JSON.stringify(data);
+    mario.addEventListener("click", () => {
         tg.close();
     }
 </script>
